@@ -9,3 +9,5 @@ It is your responsibility to verify the output from this program is correct
 This software is protected by the GNU General Public License
 
 The Function parameters and output units are available at the bottom of the following web-page: http://www.coolprop.org/coolprop/HighLevelAPI.html#parameter-table
+
+The python module "CoolProp" must be installed to run this program.
