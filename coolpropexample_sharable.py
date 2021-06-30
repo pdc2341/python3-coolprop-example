@@ -1,5 +1,3 @@
-import matplotlib.rcsetup as rcsetup
-#print(rcsetup.all_backends)
 import CoolProp.CoolProp as CP
 
 #keep the following warning in all copies of software
