@@ -16,6 +16,11 @@ print("\n\nMassic volume [specific volume] (in m^3/kg) is the inverse of density
 # (or volumic mass in kg/m^3).
 
 print("Let's compute the massic volume of water at 1 bar (1e5 Pa) of pressure: \n")
+#The parameters in the following function are:
+#D=Density
+#P=Pressure
+#Q=Quality
+#fluid=fluid type=water
 vL = 1/CP.PropsSI(b'D',b'P',1e5,b'Q',0,fluid)
 print(vL)
 
@@ -37,9 +42,16 @@ print(vv)
 print("\n")
 
 #viscocity of water at known Temp and Pressure
+#The parameters in the following function are:
+#V=Viscosity
+#T=Temperature
+#P=Pressure
+#fluid2=fluid type=air
 av=CP.PropsSI(b'V', b'T', 293.15, b'P', 101325, fluid2)
 
 #density of water at known Temp and Pressure
+#The parameters in the following function are:
+#D=Density
 ad=CP.PropsSI(b'D', b'T', 293.15, b'P', 101325, fluid2)
 
 print("Viscosity divided by density gives kinematic viscosity")
@@ -49,7 +61,8 @@ print(akv)
 
 
 
-
+#The parameters in the following function are:
+#L=Thermal Conductivity
 kth=CP.PropsSI(b'L', b'T', 293.15, b'P', 101325, fluid2)
 print("\nThermal conductivity of air at 20 C: \n")
 print(kth)
