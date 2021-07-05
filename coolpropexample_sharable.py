@@ -15,6 +15,39 @@ pressure_at_critical_point = CP.PropsSI(fluid,b'pcrit')
 print("\n\nMassic volume [specific volume] (in m^3/kg) is the inverse of density")
 # (or volumic mass in kg/m^3).
 
+
+
+
+outp = input("Enter property to output (H for enthalpy, S for entropy, D for density, P for pressure, T for temperature, Q for Quality): ")
+param1a = input("Enter property type 1 (H for enthalpy, S for entropy, D for density, P for pressure, T for temperature, Q for Quality): ")
+param1b = input("Enter property 1 value: ")
+param2a = input("Enter property type 2 (H for enthalpy, S for entropy, D for density, P for pressure, T for temperature, Q for Quality): ")
+param2b = input("Enter property 2 value: ")
+
+outp=outp.encode('UTF-8')
+param1a=param1a.encode('UTF-8')
+param2a=param2a.encode('UTF-8')
+param1b=int(param1b)
+param2b=int(param2b)
+
+pressure_at_critical_point = CP.PropsSI(fluid,b'pcrit')
+print("\n\nMassic volume [specific volume] (in m^3/kg) is the inverse of density")
+# (or volumic mass in kg/m^3).
+
+print("Let's compute the specific enthalpy of water at 1 bar (1e5 Pa) of pressure: \n")
+#The parameters in the following function are:
+#H=Enthalpy
+#P=Pressure
+#Q=Quality
+#fluid=fluid type=water
+sEnth = CP.PropsSI(outp,param1a,param1b,param2a,param2b,fluid)
+#sEnth = CP.PropsSI(b'H',b'P',1e5,b'Q',0,fluid)
+print(sEnth)
+print("J/Kg")
+
+
+
+
 print("Let's compute the specific enthalpy of saturated liquid water at 1 bar (1e5 Pa) of pressure: \n")
 #The parameters in the following function are:
 #H=Enthalpy
